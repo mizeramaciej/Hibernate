@@ -1,0 +1,22 @@
+<h2>$transactions.size() Transactions in database.</h2>
+</br>
+List of all transactions :
+
+#set($i=1)
+<table class="gridtable">
+    <tr>
+        <th>Lp.</th>
+        <th>Quantity</th>
+        <th>Transaction ID</th>
+    </tr>
+    #foreach($trans in $transactions)
+        <tr>
+            <td>$i</td>
+            <td>$trans.getQuantity()</td>
+            <td>$trans.getID()</td>
+        </tr>
+        #set ($i = $i +1)
+    #end
+</table>
+</br>
+<p><a href='/'>Back to root</a></p>

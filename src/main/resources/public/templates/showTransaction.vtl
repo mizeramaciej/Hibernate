@@ -1,0 +1,26 @@
+<h2>$products.size() Products in $transactionId Transaction.</h2>
+</br>
+List of products :
+
+#set($i=1)
+<table class="gridtable">
+    <tr>
+        <th>Lp.</th>
+        <th>Name</th>
+        <th>Units on stock</th>
+        <th>Category ID</th>
+        <th>Product ID</th>
+    </tr>
+    #foreach($product in $products)
+        <tr>
+            <td>$i</td>
+            <td>$product.getProductName()</td>
+            <td>$product.getUnitsOnStock()</td>
+            <td>$product.getCategoryID()</td>
+            <td>$product.getId()</td>
+        </tr>
+        #set ($i = $i +1)
+    #end
+</table>
+</br>
+<p><a href='/'>Back to root</a></p>

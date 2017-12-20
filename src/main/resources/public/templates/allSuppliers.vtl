@@ -1,0 +1,26 @@
+<h2>$suppliers.size() Suppliers in database.</h2>
+</br>
+List of all suppliers :
+
+#set($i=1)
+<table class="gridtable">
+    <tr>
+        <th>Lp.</th>
+        <th>Company name</th>
+        <th>City</th>
+        <th>Street</th>
+        <th>Supplier ID</th>
+    </tr>
+    #foreach($supplier in $suppliers)
+        <tr>
+            <td>$i</td>
+            <td>$supplier.getCompanyName()</td>
+            <td>$supplier.getCity()</td>
+            <td>$supplier.getStreet()</td>
+            <td>$supplier.getId()</td>
+        </tr>
+        #set ($i = $i +1)
+    #end
+</table>
+</br>
+<p><a href='/'>Back to root</a></p>

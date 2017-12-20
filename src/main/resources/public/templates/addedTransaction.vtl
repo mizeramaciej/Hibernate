@@ -1,0 +1,8 @@
+<h1>Transaction added!</h1>
+<p>Quantity : $quantity</p>
+<p>Products</p>
+#foreach($product in $products)
+    <p>Product name : $product.getProductName()</p>
+#end
+<p><a href='/'>Back to root</a></p>
+<p><a href='/allSuppliers'>View all Suppliers</a></p>
